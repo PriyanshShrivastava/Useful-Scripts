@@ -1,4 +1,5 @@
 #This script will be used to deploy any webpages which you have a link and name of zip file to (centos7):
+
 *********************************
 #!/bin/bash
 
@@ -16,6 +17,10 @@ unzip $2.zip
 cp -r $2/* /var/www/html/
 
 sudo systemctl restart httpd
+
+## Remove /webfiles directory
+
+rm -rf /tmp/webfiles
 
 *********************************
 Run this commands:
